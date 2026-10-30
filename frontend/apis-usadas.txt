@@ -1,0 +1,16 @@
+APIS USADAS NO PROJETO
+
+Em uso:
+1. GitHub REST API (https://api.github.com)
+   - Usada em: app/GithubAnalysis.tsx
+
+2. Embla Carousel API (pacote embla-carousel-react)
+   - Usada em: app/Carousel.tsx
+
+3. Canvas 2D API (nativa do navegador)
+   - Usada em: app/PixelSpaceBackground.tsx
+
+Sem uso no momento:
+4. Pixabay API (https://pixabay.com/api/)
+   - Rota app/api/space-bg/route.ts (nenhum componente chama essa rota)
+   - Exige a chave PIXABAY_API_KEY
