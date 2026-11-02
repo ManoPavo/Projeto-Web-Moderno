@@ -7,8 +7,9 @@ Em uso:
 2. Embla Carousel API (pacote embla-carousel-react)
    - Usada em: app/Carousel.tsx
 
-3. Canvas 2D API (nativa do navegador)
+3. tsParticles (pacotes @tsparticles/react e @tsparticles/slim)
    - Usada em: app/PixelSpaceBackground.tsx
+   - Usada para renderizar o fundo animado de partículas
 
 Sem uso no momento:
 4. Pixabay API (https://pixabay.com/api/)
