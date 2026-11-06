@@ -4,31 +4,38 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import pavis from "./elemt/Pavis.png";
 
-const SHOW_MS = 1000; // tempo com a splash visível
-const FADE_MS = 600; // duração do fade-out
+const TEMPO_VISIVEL = 1000;
+const TEMPO_TRANSICAO = 600;
 
-export default function SplashScreen() {
- 
-  const [fading, setFading] = useState(false);
-  const [gone, setGone] = useState(false);
+export default function TelaInicializacao() {
+  const [estaDesaparecendo, setEstaDesaparecendo] = useState(false);
+  const [estaOculta, setEstaOculta] = useState(false);
 
   useEffect(() => {
-  
-    const t1 = setTimeout(() => setFading(true), SHOW_MS);
-    const t2 = setTimeout(() => setGone(true), SHOW_MS + FADE_MS);
+    const temporizadorTransicao = setTimeout(
+      () => setEstaDesaparecendo(true),
+      TEMPO_VISIVEL,
+    );
+    const temporizadorOcultar = setTimeout(
+      () => setEstaOculta(true),
+      TEMPO_VISIVEL + TEMPO_TRANSICAO,
+    );
+
     return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
+      clearTimeout(temporizadorTransicao);
+      clearTimeout(temporizadorOcultar);
     };
   }, []);
 
-  if (gone) return null;
+  if (estaOculta) return null;
 
- 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-[radial-gradient(circle,#1a1236_0%,#080812_70%)] transition-opacity"
-      style={{ opacity: fading ? 0 : 1, transitionDuration: `${FADE_MS}ms` }}
+      style={{
+        opacity: estaDesaparecendo ? 0 : 1,
+        transitionDuration: `${TEMPO_TRANSICAO}ms`,
+      }}
     >
       <Image
         src={pavis}

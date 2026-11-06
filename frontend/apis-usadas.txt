@@ -1,17 +1,12 @@
 APIS USADAS NO PROJETO
 
-Em uso:
+
 1. GitHub REST API (https://api.github.com)
-   - Usada em: app/GithubAnalysis.tsx
+   em: app/GithubAnalysis.tsx
 
 2. Embla Carousel API (pacote embla-carousel-react)
-   - Usada em: app/Carousel.tsx
+         em: app/Carousel.tsx
 
 3. tsParticles (pacotes @tsparticles/react e @tsparticles/slim)
-   - Usada em: app/PixelSpaceBackground.tsx
-   - Usada para renderizar o fundo animado de partículas
-
-Sem uso no momento:
-4. Pixabay API (https://pixabay.com/api/)
-   - Rota app/api/space-bg/route.ts (nenhum componente chama essa rota)
-   - Exige a chave PIXABAY_API_KEY
+   em: app/PixelSpaceBackground.tsx
+renderizar o fundo animado de partículas

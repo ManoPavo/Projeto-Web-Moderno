@@ -4,7 +4,7 @@ import { ParticlesProvider, Particles } from "@tsparticles/react";
 import type { ISourceOptions } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
-const particlesOptions: ISourceOptions = {
+const opcoesParticulas: ISourceOptions = {
   fullScreen: { enable: false },
   particles: {
     color: { value: ["#b79cff", "#8b5cf6", "#ffffff"] },
@@ -36,12 +36,12 @@ const particlesOptions: ISourceOptions = {
   detectRetina: true,
 };
 
-export default function PixelSpaceBackground() {
+export default function FundoEspacialPixelado() {
   return (
     <ParticlesProvider init={loadSlim}>
       <Particles
         id="space-background"
-        options={particlesOptions}
+        options={opcoesParticulas}
         className="fixed inset-0 -z-10 pointer-events-none"
         style={{
           width: "100vw",
