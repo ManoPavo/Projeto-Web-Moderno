@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import AnaliseGithub from "./GithubAnalysis";
 
 export default function PaginaInicial() {
@@ -12,7 +13,15 @@ export default function PaginaInicial() {
           </p>
         </div>
 
-        <AnaliseGithub />
+        <Suspense
+          fallback={
+            <p className="text-gray-400" role="status">
+              Carregando projetos do GitHub...
+            </p>
+          }
+        >
+          <AnaliseGithub />
+        </Suspense>
       </div>
     </main>
   );
