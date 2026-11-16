@@ -21,7 +21,12 @@ type Linguagem = {
 };
 
 const opcoesGitHub = {
-  headers: { Accept: "application/vnd.github+json" },
+  headers: {
+    Accept: "application/vnd.github+json",
+    ...(process.env.GITHUB_TOKEN
+      ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }
+      : {}),
+  },
   next: { revalidate: 600 },
 };
 
@@ -33,17 +38,34 @@ const coresLinguagens = [
   "bg-violet-400",
 ];
 
-async function buscarRepositorios(): Promise<Repositorio[]> {
+async function buscarRepositorios(): Promise<{
+  repositorios: Repositorio[];
+  mensagemErro?: string;
+}> {
   const resposta = await fetch(
     `https://api.github.com/users/${usuario}/repos?per_page=100&sort=pushed`,
     opcoesGitHub,
   );
 
   if (!resposta.ok) {
-    return [];
+    if (
+      resposta.status === 403 &&
+      resposta.headers.get("x-ratelimit-remaining") === "0"
+    ) {
+      return {
+        repositorios: [],
+        mensagemErro:
+          "O limite de consultas do GitHub foi atingido. Configure GITHUB_TOKEN no servidor para ampliar o limite da API.",
+      };
+    }
+
+    return {
+      repositorios: [],
+      mensagemErro: `Não foi possível carregar os repositórios (GitHub respondeu com erro ${resposta.status}).`,
+    };
   }
 
-  return resposta.json();
+  return { repositorios: await resposta.json() };
 }
 
 async function buscarLinguagens(url: string): Promise<Linguagem[]> {
@@ -72,12 +94,12 @@ async function buscarLinguagens(url: string): Promise<Linguagem[]> {
 }
 
 export default async function AnaliseGithub() {
-  const repositorios = await buscarRepositorios();
+  const { repositorios, mensagemErro } = await buscarRepositorios();
 
   if (repositorios.length === 0) {
     return (
-      <p className="text-gray-400">
-        Não foi possível carregar os repositórios.
+      <p className="text-gray-400" role="status">
+        {mensagemErro ?? "Nenhum repositório público encontrado."}
       </p>
     );
   }

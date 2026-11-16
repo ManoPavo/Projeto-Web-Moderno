@@ -15,8 +15,9 @@ const fonteMonoespacada = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfólio de ManoPavo",
-  description: "Projetos e estatísticas do GitHub de ManoPavo.",
+  title: "Pedro Pavão | Portfólio",
+  description:
+    "Portfólio profissional de Pedro Pavão, estudante de Técnico em Programação de Jogos.",
 };
 
 export default function LayoutRaiz({ children }: LayoutProps<"/">) {

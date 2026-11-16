@@ -16,6 +16,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## GitHub API
+
+The portfolio loads public repositories from GitHub. To avoid the lower
+unauthenticated API rate limit, create a GitHub token with read-only access to
+public repository data and add it to `frontend/.env.local`:
+
+```env
+GITHUB_TOKEN=your_github_token
+```
+
+Keep the token server-side: do not prefix it with `NEXT_PUBLIC_` or commit it.
+The `.env.local` file is ignored by Git. Restart the development server after
+adding or changing the token. Set the same `GITHUB_TOKEN` environment variable
+in the production hosting environment.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
