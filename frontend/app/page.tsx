@@ -114,11 +114,11 @@ export default function PaginaInicial() {
               </p>
               <h2 className="mt-2 text-2xl font-bold text-white">Sobre mim</h2>
               <p className="mt-4 leading-7 text-slate-300">
-                Sou estudante de Técnico em Programação de Jogos e estou em
-                busca de uma oportunidade para aprender na prática, colaborar
-                com uma equipe e transformar ideias em soluções úteis. Tenho
-                facilidade para aprender, gosto de desafios e valorizo uma boa
-                comunicação.
+                Sou estudante de Técnico em Programação de Jogos, e essa jornada
+                tem me permitido unir criatividade e tecnologia. Gosto de
+                aprender coisas novas, encarar desafios e transformar minhas
+                ideias em projetos. Valorizo colocar a teoria em prática e
+                transformar o conhecimento em soluções úteis.
               </p>
             </section>
 
