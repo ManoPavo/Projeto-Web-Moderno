@@ -2,10 +2,8 @@
 
 :root {
   color-scheme: dark;
-  --background: #09070e;
-  --foreground: #f3effa;
-  --violet: #a77af5;
-  --violet-light: #d3baff;
+  --background: #080808;
+  --foreground: #f5f5f5;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -28,14 +26,14 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 50% -20%, rgb(91 52 151 / 20%), transparent 55%),
-    linear-gradient(180deg, #0b0810 0%, #09070e 48%, #0c0812 100%);
+    radial-gradient(ellipse at 50% -20%, rgb(255 255 255 / 8%), transparent 55%),
+    linear-gradient(180deg, #101010 0%, #080808 48%, #0b0b0b 100%);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  background: rgb(167 122 245 / 35%);
+  background: rgb(255 255 255 / 30%);
   color: white;
 }
 
@@ -46,7 +44,7 @@ body {
 
 .section-kicker {
   font-family: var(--font-pixel), monospace;
-  color: #c4a4ff;
+  color: #d4d4d4;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -61,7 +59,7 @@ body {
   width: 22rem;
   height: 22rem;
   border-radius: 9999px;
-  background: rgb(107 63 173 / 13%);
+  background: rgb(255 255 255 / 5%);
   filter: blur(100px);
 }
 
@@ -73,14 +71,14 @@ body {
 .ambient-glow-two {
   top: 74rem;
   right: -14rem;
-  background: rgb(77 42 129 / 11%);
+  background: rgb(255 255 255 / 4%);
 }
 
 .crest-mark {
-  border: 1px solid rgb(198 163 255 / 45%);
-  background: linear-gradient(145deg, rgb(145 99 213 / 24%), rgb(24 15 36 / 70%));
+  border: 1px solid rgb(255 255 255 / 40%);
+  background: linear-gradient(145deg, rgb(255 255 255 / 14%), rgb(24 24 24 / 75%));
   clip-path: polygon(50% 0, 94% 15%, 88% 73%, 50% 100%, 12% 73%, 6% 15%);
-  filter: drop-shadow(0 0 12px rgb(151 102 230 / 20%));
+  filter: drop-shadow(0 0 12px rgb(255 255 255 / 10%));
 }
 
 .nav-link {
@@ -90,15 +88,15 @@ body {
 }
 
 .nav-link:hover {
-  color: #d3baff;
+  color: #ffffff;
 }
 
 .hero-panel {
-  border: 1px solid rgb(190 153 255 / 20%);
+  border: 1px solid rgb(255 255 255 / 18%);
   border-radius: 1.75rem;
   background:
-    radial-gradient(ellipse at 85% 50%, rgb(104 66 157 / 22%), transparent 42%),
-    linear-gradient(135deg, rgb(28 19 39 / 96%), rgb(14 10 20 / 96%));
+    radial-gradient(ellipse at 85% 50%, rgb(255 255 255 / 8%), transparent 42%),
+    linear-gradient(135deg, rgb(32 32 32 / 96%), rgb(14 14 14 / 96%));
   box-shadow:
     0 24px 80px rgb(0 0 0 / 35%),
     inset 0 1px rgb(255 255 255 / 4%);
@@ -110,7 +108,7 @@ body {
   z-index: 0;
   width: 16rem;
   height: 16rem;
-  border: 1px solid rgb(198 163 255 / 8%);
+  border: 1px solid rgb(255 255 255 / 8%);
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -130,7 +128,7 @@ body {
   position: absolute;
   right: 38%;
   bottom: -6.5rem;
-  color: rgb(198 163 255 / 5%);
+  color: rgb(255 255 255 / 5%);
   font-size: 24rem;
   line-height: 1;
   pointer-events: none;
@@ -139,11 +137,11 @@ body {
 .portrait-halo {
   position: absolute;
   inset: -1.5rem;
-  border: 1px solid rgb(197 163 255 / 22%);
+  border: 1px solid rgb(255 255 255 / 20%);
   border-radius: 50%;
   box-shadow:
-    0 0 48px rgb(139 92 246 / 16%),
-    inset 0 0 32px rgb(139 92 246 / 8%);
+    0 0 48px rgb(255 255 255 / 10%),
+    inset 0 0 32px rgb(255 255 255 / 5%);
 }
 
 .portrait-halo::before,
@@ -152,8 +150,8 @@ body {
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 50%;
-  background: #d3baff;
-  box-shadow: 0 0 14px #a77af5;
+  background: #ffffff;
+  box-shadow: 0 0 14px rgb(255 255 255 / 60%);
   content: "";
 }
 
@@ -168,11 +166,11 @@ body {
 }
 
 .portrait-frame {
-  border: 3px solid #9a6be6;
+  border: 3px solid #bdbdbd;
   border-radius: 48% 48% 42% 42%;
   box-shadow:
-    0 0 0 5px rgb(17 11 25 / 95%),
-    0 0 0 6px rgb(198 163 255 / 35%),
+    0 0 0 5px rgb(17 17 17 / 95%),
+    0 0 0 6px rgb(255 255 255 / 30%),
     0 20px 60px rgb(0 0 0 / 50%);
 }
 
@@ -183,7 +181,7 @@ body {
   justify-content: center;
   gap: 0.7rem;
   margin-top: 1.5rem;
-  color: rgb(226 214 245 / 75%);
+  color: rgb(255 255 255 / 75%);
   font-family: var(--font-pixel), monospace;
   font-size: 0.8rem;
   letter-spacing: 0.02em;
@@ -198,13 +196,13 @@ body {
   gap: 0.6rem;
   border-radius: 0.75rem;
   padding: 0.7rem 1rem;
-  border: 1px solid rgb(207 180 255 / 35%);
-  background: linear-gradient(135deg, #8052c4, #59318d);
-  color: white;
+  border: 1px solid rgb(255 255 255 / 40%);
+  background: linear-gradient(135deg, #f5f5f5, #bdbdbd);
+  color: #111111;
   font-family: var(--font-pixel), monospace;
   font-size: 0.85rem;
   font-weight: 650;
-  box-shadow: 0 8px 26px rgb(111 66 172 / 25%);
+  box-shadow: 0 8px 26px rgb(255 255 255 / 10%);
   transition:
     transform 160ms ease,
     background-color 160ms ease,
@@ -213,13 +211,58 @@ body {
 
 .action-button:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #9367d5, #68409f);
+  background: linear-gradient(135deg, #ffffff, #d4d4d4);
+  color: #080808;
 }
 
 .mascot-image {
   object-fit: contain;
   image-rendering: pixelated;
   filter: drop-shadow(0 5px 10px rgb(0 0 0 / 35%));
+}
+
+.mascot-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background-mascot {
+  position: absolute;
+  width: clamp(5rem, 11vw, 9rem);
+  height: auto;
+  opacity: 0.26;
+}
+
+.background-mascot-one {
+  top: 4%;
+  left: -1rem;
+}
+
+.background-mascot-two {
+  top: 19%;
+  right: -1rem;
+}
+
+.background-mascot-three {
+  top: 34%;
+  left: 1%;
+}
+
+.background-mascot-four {
+  top: 51%;
+  right: 1%;
+}
+
+.background-mascot-five {
+  top: 70%;
+  left: -1rem;
+}
+
+.background-mascot-six {
+  top: 87%;
+  right: -1rem;
 }
 
 .mascot-wave {
@@ -249,10 +292,10 @@ body {
 
 .stone-card,
 .project-card {
-  border: 1px solid rgb(191 160 231 / 15%);
+  border: 1px solid rgb(255 255 255 / 14%);
   border-radius: 1.35rem;
   background:
-    linear-gradient(145deg, rgb(25 18 34 / 94%), rgb(15 11 20 / 94%));
+    linear-gradient(145deg, rgb(29 29 29 / 94%), rgb(15 15 15 / 94%));
   box-shadow:
     0 18px 50px rgb(0 0 0 / 20%),
     inset 0 1px rgb(255 255 255 / 3%);
@@ -260,9 +303,9 @@ body {
 
 .sigil-card {
   min-width: 0;
-  border: 1px solid rgb(193 162 231 / 14%);
+  border: 1px solid rgb(255 255 255 / 13%);
   border-radius: 1rem;
-  background: linear-gradient(145deg, rgb(29 20 40 / 88%), rgb(16 12 22 / 92%));
+  background: linear-gradient(145deg, rgb(34 34 34 / 88%), rgb(16 16 16 / 92%));
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -271,15 +314,15 @@ body {
 
 .sigil-card:hover {
   transform: translateY(-3px);
-  border-color: rgb(193 162 231 / 36%);
+  border-color: rgb(255 255 255 / 35%);
 }
 
 .sigil-icon,
 .project-sigil {
-  border: 1px solid rgb(193 162 231 / 25%);
+  border: 1px solid rgb(255 255 255 / 24%);
   border-radius: 0.85rem;
   background:
-    linear-gradient(145deg, rgb(137 88 196 / 25%), rgb(34 22 48 / 80%));
+    linear-gradient(145deg, rgb(255 255 255 / 12%), rgb(34 34 34 / 80%));
   box-shadow: inset 0 1px rgb(255 255 255 / 6%);
 }
 
@@ -287,7 +330,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  color: rgb(201 172 238 / 65%);
+  color: rgb(255 255 255 / 65%);
   font-size: 0.8rem;
 }
 
@@ -295,7 +338,7 @@ body {
 .rune-divider::after {
   height: 1px;
   flex: 1;
-  background: linear-gradient(90deg, transparent, rgb(193 162 231 / 22%));
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 22%));
   content: "";
 }
 
@@ -304,7 +347,7 @@ body {
 }
 
 .quest-card {
-  border: 1px solid rgb(193 162 231 / 11%);
+  border: 1px solid rgb(255 255 255 / 11%);
   border-radius: 1rem;
   background: rgb(255 255 255 / 2%);
   transition:
@@ -313,20 +356,20 @@ body {
 }
 
 .quest-card:hover {
-  border-color: rgb(193 162 231 / 28%);
+  border-color: rgb(255 255 255 / 28%);
   background: rgb(255 255 255 / 4%);
 }
 
 .quest-number {
-  border: 1px solid rgb(193 162 231 / 22%);
+  border: 1px solid rgb(255 255 255 / 20%);
   border-radius: 0.45rem;
-  background: rgb(117 76 169 / 14%);
+  background: rgb(255 255 255 / 7%);
   font-family: Georgia, "Times New Roman", serif;
 }
 
 .contact-row dt {
   font-family: var(--font-pixel), monospace;
-  color: #9c8da9;
+  color: #a3a3a3;
   font-size: 0.7rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -335,7 +378,7 @@ body {
 .contact-row dd {
   margin-top: 0.3rem;
   overflow-wrap: anywhere;
-  color: #e9e1f1;
+  color: #e5e5e5;
   font-size: 0.9rem;
 }
 
@@ -344,7 +387,7 @@ body {
 }
 
 .contact-row a:hover {
-  color: #d3baff;
+  color: #ffffff;
 }
 
 .project-card {
@@ -361,7 +404,7 @@ body {
   bottom: -3.5rem;
   width: 8rem;
   height: 8rem;
-  border: 1px solid rgb(193 162 231 / 8%);
+  border: 1px solid rgb(255 255 255 / 8%);
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -369,7 +412,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: rgb(193 162 231 / 35%);
+  border-color: rgb(255 255 255 / 32%);
 }
 
 @keyframes pulo-card {

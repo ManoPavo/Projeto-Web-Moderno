@@ -128,22 +128,30 @@ export default function PaginaInicial() {
     <main className="relative min-h-screen overflow-hidden px-4 pb-8 text-slate-100 sm:px-6 lg:px-8">
       <div aria-hidden="true" className="ambient-glow ambient-glow-one" />
       <div aria-hidden="true" className="ambient-glow ambient-glow-two" />
+      <div aria-hidden="true" className="mascot-background">
+        <Personagem pose="mascot-guide" className="background-mascot background-mascot-one" />
+        <Personagem pose="mascot-wave" className="background-mascot background-mascot-two" />
+        <Personagem pose="mascot-rest" className="background-mascot background-mascot-three" />
+        <Personagem pose="mascot-step" className="background-mascot background-mascot-four" />
+        <Personagem pose="mascot-guide" className="background-mascot background-mascot-five" />
+        <Personagem pose="mascot-wave" className="background-mascot background-mascot-six" />
+      </div>
 
       <div className="relative mx-auto max-w-6xl">
-        <header className="sticky top-3 z-20 mt-3 flex items-center justify-between gap-4 rounded-2xl border border-violet-300/15 bg-[#100b19]/90 px-4 py-3 shadow-lg shadow-black/20 backdrop-blur-xl sm:px-6">
+        <header className="sticky top-3 z-20 mt-3 flex items-center justify-between gap-4 rounded-2xl border border-white/15 bg-[#101010]/90 px-4 py-3 shadow-lg shadow-black/20 backdrop-blur-xl sm:px-6">
           <a
             href="#inicio"
             className="group flex min-w-0 items-center gap-3"
             aria-label="Pedro Pavão, início"
           >
-            <span className="crest-mark flex h-10 w-10 shrink-0 items-center justify-center text-sm font-bold text-violet-100">
+            <span className="crest-mark flex h-10 w-10 shrink-0 items-center justify-center text-sm font-bold text-white">
               PP
             </span>
             <span className="min-w-0">
               <span className="medieval-title block truncate text-sm font-bold text-white sm:text-base">
                 Pedro Pavão
               </span>
-              <span className="hidden text-[10px] uppercase tracking-[0.2em] text-violet-300/70 sm:block">
+              <span className="hidden text-[10px] uppercase tracking-[0.2em] text-white/60 sm:block">
                 Crônicas de um criador
               </span>
             </span>
@@ -176,16 +184,16 @@ export default function PaginaInicial() {
           </span>
           <div className="relative z-10 order-2 md:order-1">
             <p className="section-kicker mb-4">
-              <span aria-hidden="true" className="mr-2 text-violet-200">
+              <span aria-hidden="true" className="mr-2 text-white">
                 ✦
               </span>
               Candidato a oportunidades profissionais
             </p>
             <h1 className="medieval-title max-w-2xl text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Pedro
-              <span className="block text-violet-300">Pavão</span>
+              <span className="block text-white/65">Pavão</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-violet-50/80 sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               Estudante de Técnico em Programação de Jogos, com perfil criativo,
               comunicativo e adaptável. Gosto de identificar necessidades do
               cotidiano e idealizar soluções práticas por meio da tecnologia.
@@ -199,15 +207,15 @@ export default function PaginaInicial() {
                 Explorar projetos <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-violet-100/70">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-white/65">
               <span>
-                <span aria-hidden="true" className="mr-2 text-violet-300">
+                <span aria-hidden="true" className="mr-2 text-white">
                   ⌖
                 </span>
                 Rio de Janeiro, RJ
               </span>
               <span>
-                <span aria-hidden="true" className="mr-2 text-violet-300">
+                <span aria-hidden="true" className="mr-2 text-white">
                   ⚔
                 </span>
                 Programação de jogos
@@ -229,11 +237,11 @@ export default function PaginaInicial() {
             </div>
             <div className="portrait-caption">
               <Personagem pose="mascot-wave" className="h-9 w-9" />
-              <span aria-hidden="true" className="text-violet-200">
+              <span aria-hidden="true" className="text-white">
                 ✦
               </span>
               <span>O aventureiro</span>
-              <span aria-hidden="true" className="text-violet-200">
+              <span aria-hidden="true" className="text-white">
                 ✦
               </span>
             </div>
@@ -255,9 +263,12 @@ export default function PaginaInicial() {
                 Meu arsenal
               </h2>
             </div>
-            <span className="hidden text-xs text-slate-500 sm:block">
-              Conhecimentos em desenvolvimento
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="hidden text-xs text-slate-500 sm:block">
+                Conhecimentos em desenvolvimento
+              </span>
+              <Personagem pose="mascot-step" className="h-14 w-14" />
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {tecnologias.map((tecnologia) => (
@@ -267,7 +278,7 @@ export default function PaginaInicial() {
               >
                 <span
                   aria-hidden="true"
-                  className="sigil-icon flex h-11 w-11 shrink-0 items-center justify-center text-sm font-black text-violet-100 transition group-hover:-rotate-6 group-hover:scale-105"
+                  className="sigil-icon flex h-11 w-11 shrink-0 items-center justify-center text-sm font-black text-white transition group-hover:-rotate-6 group-hover:scale-105"
                 >
                   {tecnologia.marcador}
                 </span>
@@ -275,7 +286,7 @@ export default function PaginaInicial() {
                   <span className="block truncate text-xs font-semibold text-white sm:text-sm">
                     {tecnologia.nome}
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-[0.16em] text-violet-300/60">
+                  <span className="mt-1 block text-[10px] uppercase tracking-[0.16em] text-white/50">
                     {tecnologia.grupo}
                   </span>
                 </span>
@@ -334,7 +345,7 @@ export default function PaginaInicial() {
                   >
                     <span
                       aria-hidden="true"
-                      className="quest-number absolute left-3 top-4 flex h-7 w-7 items-center justify-center text-xs font-bold text-violet-200 sm:left-4"
+                      className="quest-number absolute left-3 top-4 flex h-7 w-7 items-center justify-center text-xs font-bold text-white sm:left-4"
                     >
                       0{indice + 1}
                     </span>
@@ -342,7 +353,7 @@ export default function PaginaInicial() {
                       <h3 className="font-semibold leading-6 text-white">
                         {atividade.titulo}
                       </h3>
-                      <span className="rounded-full border border-violet-300/20 bg-violet-300/[0.07] px-3 py-1 text-[10px] font-medium uppercase tracking-wide text-violet-200">
+                      <span className="rounded-full border border-white/20 bg-white/[0.05] px-3 py-1 text-[10px] font-medium uppercase tracking-wide text-white/80">
                         {atividade.etiqueta}
                       </span>
                     </div>
@@ -372,7 +383,10 @@ export default function PaginaInicial() {
               id="contato"
               className="stone-card scroll-mt-28 p-6 sm:p-8"
             >
-              <TituloSecao etiqueta="Abra um portal" titulo="Contato" />
+              <div className="flex items-start justify-between gap-3">
+                <TituloSecao etiqueta="Abra um portal" titulo="Contato" />
+                <Personagem pose="mascot-wave" className="h-14 w-14 shrink-0" />
+              </div>
               <p className="mb-6 text-sm leading-6 text-slate-400">
                 Vamos conversar sobre ideias, projetos e oportunidades.
               </p>
@@ -410,7 +424,7 @@ export default function PaginaInicial() {
                     key={habilidade}
                     className="flex gap-3 text-sm leading-6 text-slate-300"
                   >
-                    <span aria-hidden="true" className="text-violet-300">
+                    <span aria-hidden="true" className="text-white">
                       ✦
                     </span>
                     {habilidade}
@@ -435,15 +449,15 @@ export default function PaginaInicial() {
             {projetos.map((projeto, indice) => (
               <article key={projeto.titulo} className="project-card group p-5 sm:p-6">
                 <div className="mb-5 flex items-center justify-between">
-                  <span className="project-sigil flex h-12 w-12 items-center justify-center text-lg font-bold text-violet-100">
+                  <span className="project-sigil flex h-12 w-12 items-center justify-center text-lg font-bold text-white">
                     {projeto.simbolo}
                   </span>
                   <Personagem pose={projeto.pose} className="h-14 w-14" />
-                  <span className="font-mono text-xs tracking-[0.2em] text-violet-300/50">
+                  <span className="font-mono text-xs tracking-[0.2em] text-white/40">
                     0{indice + 1}
                   </span>
                 </div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-violet-300">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/65">
                   {projeto.tipo}
                 </p>
                 <h3 className="medieval-title mt-2 text-xl font-bold text-white">
@@ -468,12 +482,7 @@ export default function PaginaInicial() {
                 Projetos no GitHub
               </h2>
             </div>
-            <span
-              aria-hidden="true"
-              className="hidden text-3xl text-violet-300/40 sm:block"
-            >
-              ⛨
-            </span>
+            <Personagem pose="mascot-guide" className="h-14 w-14 shrink-0" />
           </div>
           <Suspense
             fallback={
@@ -486,8 +495,8 @@ export default function PaginaInicial() {
           </Suspense>
         </section>
 
-        <footer className="mt-10 border-t border-violet-300/10 py-7 text-center">
-          <p className="medieval-title text-sm text-violet-100/70">
+        <footer className="mt-10 border-t border-white/10 py-7 text-center">
+          <p className="medieval-title text-sm text-white/70">
             Pedro Pavão
           </p>
           <p className="mt-1 text-xs text-slate-500">

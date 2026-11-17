@@ -7,7 +7,7 @@ import { loadSlim } from "@tsparticles/slim";
 const opcoesParticulas: ISourceOptions = {
   fullScreen: { enable: false },
   particles: {
-    color: { value: ["#d3baff", "#9d70e8", "#7045a2"] },
+    color: { value: ["#ffffff", "#d4d4d4", "#737373"] },
     move: {
       enable: true,
       speed: 0.35,
@@ -35,7 +35,7 @@ export default function FundoEspacialPixelado() {
           width: "100vw",
           height: "100vh",
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(84, 52, 124, 0.12) 0%, transparent 58%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.08) 0%, transparent 58%)",
         }}
       />
     </ParticlesProvider>

@@ -31,7 +31,7 @@ export default function TelaInicializacao() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[radial-gradient(circle,#1a1236_0%,#080812_70%)] transition-opacity"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[radial-gradient(circle,#202020_0%,#080808_70%)] transition-opacity"
       style={{
         opacity: estaDesaparecendo ? 0 : 1,
         transitionDuration: `${TEMPO_TRANSICAO}ms`,
@@ -48,7 +48,7 @@ export default function TelaInicializacao() {
             className="animate-pulse [image-rendering:pixelated]"
           />
         </div>
-        <p className="medieval-title text-sm tracking-[0.2em] text-violet-100/80">
+        <p className="medieval-title text-sm tracking-[0.2em] text-white/80">
           Pedro Pavão
         </p>
       </div>
