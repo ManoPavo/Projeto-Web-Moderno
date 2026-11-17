@@ -7,31 +7,19 @@ import { loadSlim } from "@tsparticles/slim";
 const opcoesParticulas: ISourceOptions = {
   fullScreen: { enable: false },
   particles: {
-    color: { value: ["#b79cff", "#8b5cf6", "#ffffff"] },
-    links: {
-      enable: true,
-      distance: 110,
-      color: "#8b5cf6",
-      opacity: 0.22,
-      width: 1,
-    },
+    color: { value: ["#d3baff", "#9d70e8", "#7045a2"] },
     move: {
       enable: true,
-      speed: 0.5,
-      direction: "none",
-      outModes: { default: "bounce" },
+      speed: 0.35,
+      direction: "top",
+      outModes: { default: "out" },
     },
-    number: { value: 65 },
+    number: { value: 36 },
     opacity: {
-      value: { min: 0.25, max: 0.95 },
-      animation: { enable: true, speed: 1.5, sync: false },
+      value: { min: 0.12, max: 0.55 },
+      animation: { enable: true, speed: 0.8, sync: false },
     },
-    size: { value: { min: 1, max: 2.8 } },
-  },
-  interactivity: {
-    detectsOn: "window",
-    events: { onHover: { enable: true, mode: "repulse" } },
-    modes: { repulse: { distance: 95, duration: 0.4 } },
+    size: { value: { min: 1, max: 2.2 } },
   },
   detectRetina: true,
 };
@@ -47,7 +35,7 @@ export default function FundoEspacialPixelado() {
           width: "100vw",
           height: "100vh",
           background:
-            "radial-gradient(circle at center, #16102d 0%, #080812 70%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(84, 52, 124, 0.12) 0%, transparent 58%)",
         }}
       />
     </ParticlesProvider>

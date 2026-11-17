@@ -81,14 +81,14 @@ export default function Carrossel({ children }: { children: ReactNode }) {
         <button
           onClick={irParaAnterior}
           aria-label="Anterior"
-          className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/70 px-3 py-2 text-white hover:bg-black"
+          className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-200/20 bg-[#160f20] px-3 py-2 text-violet-100 shadow-lg transition hover:border-violet-200/50 hover:bg-[#251735]"
         >
           ‹
         </button>
         <button
           onClick={irParaProximo}
           aria-label="Próximo"
-          className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 rounded-full bg-black/70 px-3 py-2 text-white hover:bg-black"
+          className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-200/20 bg-[#160f20] px-3 py-2 text-violet-100 shadow-lg transition hover:border-violet-200/50 hover:bg-[#251735]"
         >
           ›
         </button>
@@ -100,7 +100,7 @@ export default function Carrossel({ children }: { children: ReactNode }) {
             key={indice}
             onClick={() => carrossel?.scrollTo(indice)}
             aria-label={`Ir para o slide ${indice + 1}`}
-            className={`h-2 w-2 rounded-full ${indice === slideSelecionado ? "bg-white" : "bg-white/30"}`}
+            className={`h-2 w-2 rounded-full transition ${indice === slideSelecionado ? "bg-violet-200" : "bg-violet-100/25"}`}
           />
         ))}
       </div>

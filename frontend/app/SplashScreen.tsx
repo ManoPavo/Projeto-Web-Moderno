@@ -37,14 +37,21 @@ export default function TelaInicializacao() {
         transitionDuration: `${TEMPO_TRANSICAO}ms`,
       }}
     >
-      <Image
-        src={pavis}
-        alt="Pavis"
-        priority
-        width={200}
-        height={200}
-        className="animate-pulse [image-rendering:pixelated]"
-      />
+      <div className="flex flex-col items-center gap-4">
+        <div className="crest-mark flex h-32 w-32 items-center justify-center">
+          <Image
+            src={pavis}
+            alt="Símbolo de Pedro Pavão"
+            priority
+            width={96}
+            height={96}
+            className="animate-pulse [image-rendering:pixelated]"
+          />
+        </div>
+        <p className="medieval-title text-sm tracking-[0.2em] text-violet-100/80">
+          Pedro Pavão
+        </p>
+      </div>
     </div>
   );
 }

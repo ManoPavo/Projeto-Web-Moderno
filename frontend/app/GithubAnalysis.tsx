@@ -31,11 +31,11 @@ const opcoesGitHub = {
 };
 
 const coresLinguagens = [
-  "bg-sky-400",
-  "bg-pink-400",
-  "bg-amber-400",
-  "bg-emerald-400",
+  "bg-violet-300",
   "bg-violet-400",
+  "bg-purple-500",
+  "bg-fuchsia-400",
+  "bg-indigo-400",
 ];
 
 async function buscarRepositorios(): Promise<{
@@ -119,7 +119,7 @@ export default async function AnaliseGithub() {
           href={repositorio.html_url}
           target="_blank"
           rel="noreferrer"
-          className="block h-full rounded-lg border border-white/10 bg-black/60 p-4 backdrop-blur transition duration-[360ms] ease-out hover:-translate-y-3 hover:border-white/30 hover:shadow-lg hover:shadow-violet-500/20 active:-translate-y-6 active:-rotate-3"
+          className="block h-full rounded-2xl border border-violet-200/15 bg-[#100b19]/90 p-5 backdrop-blur transition duration-[360ms] ease-out hover:-translate-y-2 hover:border-violet-200/40 hover:shadow-lg hover:shadow-violet-500/15 active:-translate-y-3 active:-rotate-1"
         >
           <h2 className="font-semibold text-white">{repositorio.name}</h2>
           <p className="mt-1 min-h-10 text-sm text-gray-400">
